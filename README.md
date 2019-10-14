@@ -13,7 +13,6 @@ A simple example of calculating SWD on GPU.
 
 ```python
 import torch
-import torch
 from swd import swd
 
 torch.manual_seed(123) # fix seed
@@ -22,6 +21,10 @@ x2 = torch.rand(1024, 3, 128, 128)
 out = swd(x1, x2, device="cuda") # Fast estimation if device="cuda"
 print(out) # tensor(53.6950)
 ```
+
+## Japanese article
+PyTorchでSliced Wasserstein Distance (SWD)を実装した  
+[https://blog.shikoan.com/swd-pytorch/](https://blog.shikoan.com/swd-pytorch/)
 
 ## Parameter details
 Detail information of ```swd``` paramters.
