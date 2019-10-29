@@ -102,7 +102,7 @@ def swd(image1, image2,
     # Please change these values according to memory usage.
     # original = n_repeat_projection=4, proj_per_repeat=128    
     assert image1.size() == image2.size()
-    assert image.ndim == 4
+    assert image1.ndim == 4 and image2.ndim == 4
 
     if n_pyramids is None:
         n_pyramids = int(np.rint(np.log2(image1.size(2) // 16)))
